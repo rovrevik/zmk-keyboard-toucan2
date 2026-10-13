@@ -1,0 +1,4 @@
+.git
+.west-workspace
+build
+*.uf2

@@ -1,0 +1,32 @@
+services:
+  build:
+    build: .
+    image: zmk-keyboard-toucan2-build
+    working_dir: /work
+    volumes:
+      - .:/work
+    environment:
+      HOST_UID: ${HOST_UID:-}
+      HOST_GID: ${HOST_GID:-}
+    command:
+      - bash
+      - -lc
+      - |
+        set -eu
+        ws=/work/.west-workspace
+        rm -rf "$${ws}/config"
+        mkdir -p "$${ws}/config"
+        cp -a /work/config/. "$${ws}/config/"
+        cd "$${ws}"
+        if [ ! -d .west ]; then
+          west init -l config
+        fi
+        west update --fetch-opt=--filter=tree:0
+        west zephyr-export
+        bash /work/build.sh
+        if [ -n "$$HOST_UID" ] && [ -n "$$HOST_GID" ]; then
+          chown -R "$$HOST_UID:$$HOST_GID" "$${ws}"
+          if [ -e /work/build ]; then
+            chown -R "$$HOST_UID:$$HOST_GID" /work/build
+          fi
+        fi
