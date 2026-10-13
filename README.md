@@ -1,6 +1,6 @@
 # ZMK config for beekeeb Toucan2 Keyboard
 
-[The beekeeb Toucan2 Keyboard](https://beekeeb.com/introducing-toucan2/) is a wireless split 42-key column‑stagger keyboard that a display and a trackpad, with an aggressive stagger on the pinky columns.
+[The beekeeb Toucan2 Keyboard](https://beekeeb.com/introducing-toucan2/) is a wireless split 36-key column‑stagger keyboard that a display and a trackpad, with an aggressive stagger on the pinky columns.
 
 # Customizations
 
