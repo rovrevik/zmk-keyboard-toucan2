@@ -30,6 +30,12 @@ The first run pulls the image and the west modules. Later runs reuse both. `.wes
     - [Flashing the Toucan2 Firmware](https://docs.beekeeb.com/toucan2-keyboard/convert-toucan-to-toucan2#flashing-the-toucan2-firmware)
 - [Quick Start, Keymap & Firmware](https://docs.beekeeb.com/toucan-keyboard/quick-start-keymap-and-firmware)
 
+- [Toucan with Prospector](https://docs.beekeeb.com/toucan-keyboard/quick-start-keymap-and-firmware#toucan-with-prospector)
+  - [prospector-scanner](https://github.com/beekeeb/zmk-keyboard-toucan/tree/prospector-scanner)
+  - [Prospector Scanner: Configure Keyboard](https://github.com/t-ogura/zmk-config-prospector)
+  - [Prospector Scanner: Keyboard Integration](https://github.com/t-ogura/zmk-config-prospector#keyboard-integration)
+  - [ZMK: Keyboard Dongle](https://zmk.dev/docs/hardware-integration/dongle)
+
 - [ZMK's USB logging page](https://v0-3-branch.zmk.dev/docs/development/usb-logging)
   ```bash
   # west build argument

@@ -6,6 +6,8 @@
 
 - **Keymap**: [config/toucan.keymap](config/toucan.keymap)
 - **General configs**: [boards/shields/toucan/toucan_left.conf](boards/shields/toucan/toucan_left.conf) and [boards/shields/toucan/toucan_right.conf](boards/shields/toucan/toucan_right.conf)
+- **Overrides**: [config/toucan_left.conf](config/toucan_left.conf) and [config/toucan_right.conf](config/toucan_right.conf)
+- **Prospector Scanner**: the status advertisement settings in [config/toucan_left.conf](config/toucan_left.conf)
 - **Swipe shortcuts**: the `swipe_button_mapper` node in [boards/shields/toucan/toucan.dtsi](boards/shields/toucan/toucan.dtsi)
 - **Invert scroll / trackpad settings**: the `tps43_trackpad` node in [boards/shields/toucan/toucan_right.overlay](boards/shields/toucan/toucan_right.overlay)
 
