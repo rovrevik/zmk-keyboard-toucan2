@@ -8,7 +8,7 @@ From this repo:
 docker compose run --rm build
 ```
 
-Compose builds the image, mounts this repo at `/work`, copies `config/` into a gitignored `.west-workspace/`, and runs `west init -l config` there when `.west/` is missing. Then it runs `west update` and `west zephyr-export`, and runs [build.sh](build.sh) once inside the container. The Zephyr checkout stays in `.west-workspace/` so it does not replace [zephyr/module.yml](zephyr/module.yml).
+Compose builds the image, mounts this repo at `/work`, copies `config/` into a gitignored `.west-workspace/`, and runs `west init -l config` there when `.west/` is missing. Then it runs `west update` and `west zephyr-export`, runs [draw.py](draw.py), and runs [build.sh](build.sh) once inside the container. The Zephyr checkout stays in `.west-workspace/` so it does not replace [zephyr/module.yml](zephyr/module.yml).
 
 On Linux, pass your user id so the generated trees are not root-owned:
 
@@ -23,6 +23,10 @@ Firmware:
 - `build/settings_reset/zephyr/zmk.uf2`
 
 The first run pulls the image and the west modules. Later runs reuse both. `.west-workspace/` and `build/` stay out of git.
+
+## Draw
+
+The compose build runs [draw.py](draw.py) before the firmware build and writes `build/keymap/keymap.svg`. The image provides the `keymap` command from [keymap-drawer](https://github.com/caksoylar/keymap-drawer) 0.23.0.
 
 ## Reference
 

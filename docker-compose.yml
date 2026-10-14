@@ -23,6 +23,7 @@ services:
         fi
         west update --fetch-opt=--filter=tree:0
         west zephyr-export
+        PATH="/opt/keymap-drawer/bin:$$PATH" /opt/keymap-drawer/bin/python /work/draw.py
         bash /work/build.sh
         if [ -n "$$HOST_UID" ] && [ -n "$$HOST_GID" ]; then
           chown -R "$$HOST_UID:$$HOST_GID" "$${ws}"

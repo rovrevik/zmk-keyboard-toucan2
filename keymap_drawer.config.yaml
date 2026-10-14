@@ -1,0 +1,125 @@
+# keymap-drawer label overrides for config/toucan.keymap
+# Use full ZMK binding strings (&kp LG(...)); Gui+Z-style keys are resolved after parsing.
+# https://github.com/caksoylar/keymap-drawer/blob/main/docs/CONFIGURATION.md#raw_binding_map
+parse_config:
+  # Hide combos from SVG only (firmware unchanged). Node names match config/toucan.keymap.
+  zmk_combos:
+    # Left-thumb + home-row roll shortcuts (BASE_C / BASE_G)
+    lthm_a_cags: { hidden: true }
+    lthm_a_gasc: { hidden: true }
+    lthm_s_cags: { hidden: true }
+    lthm_s_gasc: { hidden: true }
+    lthm_f_cags: { hidden: true }
+    lthm_f_gasc: { hidden: true }
+    lthm_g_cags: { hidden: true }
+    lthm_g_gasc: { hidden: true }
+    lthm_z_cags: { hidden: true }
+    lthm_z_gasc: { hidden: true }
+    lthm_x_cags: { hidden: true }
+    lthm_x_gasc: { hidden: true }
+    lthm_c_cags: { hidden: true }
+    lthm_c_gasc: { hidden: true }
+    lthm_v_cags: { hidden: true }
+    lthm_v_gasc: { hidden: true }
+    gui_return_cags: { align: right, offset: -1.5 }
+    comment_out_line_cags: { align: left, offset: 0.25 }
+    activate_terminal_cags: { align: left, offset: 0.25 }
+
+  # Short names on layer-tap / &mo legends (keys must match display-name from toucan.keymap)
+  # https://github.com/caksoylar/keymap-drawer/blob/main/CONFIGURATION.md#layer_legend_map
+  layer_legend_map:
+    BaseCgs: CAGS
+    BaseGsc: GASC
+    CrsrCgs: cursor
+    CrsrGsc: cursor
+    NmPdCgs: number
+    NmPdGsc: number
+    SyPdCgs: symbol
+    SyPdGsc: symbol
+    FnPd: function
+    Mouse: mouse
+    Slow: slow
+    Fast: fast
+    Function: globe
+
+  raw_binding_map:
+    # NUM_PAD number row (shift): !@#$%^&*()
+    '&kp N0': {tap: "0", shifted: ")"}
+    '&kp N1': {tap: "1", shifted: "!"}
+    '&kp N2': {tap: "2", shifted: "@"}
+    '&kp N3': {tap: "3", shifted: "#"}
+    '&kp N4': {tap: "4", shifted: "$"}
+    '&kp N5': {tap: "5", shifted: "%"}
+    '&kp N6': {tap: "6", shifted: "^"}
+    '&kp N7': {tap: "7", shifted: "&"}
+    '&kp N8': {tap: "8", shifted: "*"}
+    '&kp N9': {tap: "9", shifted: "("}
+
+    '&kp GRAVE': {tap: "`", shifted: "~"}
+    '&kp MINUS': {tap: "-", shifted: "_"}
+    '&kp EQUAL': {tap: "=", shifted: "+"}
+    '&kp BSLH': {tap: "\\", shifted: "|"}
+    '&kp SEMI': {tap: ";", shifted: ":"}
+    '&kp SQT': {tap: "'", shifted: "\""}
+    '&kp COMMA': {tap: ",", shifted: "<"}
+    '&kp DOT': {tap: ".", shifted: ">"}
+    '&kp FSLH': {tap: "/", shifted: "?"}
+
+    # CURSOR shortcuts (#define _NAME LG(...))
+    '&kp LG(Q)': quit
+    '&kp LG(W)': close
+    '&kp LG(R)': refresh
+    '&kp LG(T)': new tab
+    '&kp LG(A)': all
+    '&kp LG(S)': save
+    '&kp LG(F)': find
+    '&kp LG(G)': find next
+    '&kp LG(C)': copy
+    '&kp LG(V)': paste
+    '&kp LG(X)': cut
+    '&kp LG(Z)': undo
+    '&kp LS(LG(Z))': redo
+
+    # Combos
+    '&kp LG(RET)': gui+ret
+    '&kp LC(GRAVE)': terminal
+    '&kp LG(FSLH)': comment
+
+    # Behaviors
+    # '&bootloader': BOOT
+    # '&studio_unlock': STUDIO
+    # '&capsword': capsword
+
+    # Home row mod holds (expanded from LHRM_* / RHRM_* LCTRL, LALT, ...)
+    '&kp LCTRL': lctrl
+    '&kp LALT': lalt
+    '&kp LGUI': lgui
+    '&kp LSHFT': lshift
+    '&kp RCTRL': rctrl
+    '&kp RALT': ralt
+    '&kp RGUI': rgui
+    '&kp RSHFT': rshift
+
+    # Hyper / Meh holds (expanded from LHYPER / LMEH / RHYPER / RMEH)
+    '&kp LC(LA(LG(LSHFT)))': lhyper
+    '&kp LC(LA(LSHFT))': lmeh
+    '&kp RC(RA(RG(RSHFT)))': rhyper
+    '&kp RC(RA(RSHFT))': rmeh
+
+    # Mouse layer
+    '&mkp LCLK': lclick
+    '&mkp RCLK': rclick
+    '&mkp MCLK': mclick
+    '&mmv MOVE_UP': up
+    '&mmv MOVE_DOWN': down
+    '&mmv MOVE_LEFT': left
+    '&mmv MOVE_RIGHT': right
+    '&msc SCRL_LEFT': lscroll
+    '&msc SCRL_UP': uscroll
+    '&msc SCRL_DOWN': dscroll
+    '&msc SCRL_RIGHT': rscroll
+
+draw_config:
+  svg_extra_style: |
+    svg.keymap { font-size: 10px; }
+    text.combo { font-size: 6px; }
