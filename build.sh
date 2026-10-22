@@ -6,10 +6,13 @@ set -eu
 
 cd /work/.west-workspace
 
+ZMK_USB_LOGGING=0
+
 # Left half: display, ZMK Studio
 west build -s zmk/app -d /work/build/toucan_left -b seeeduino_xiao_ble \
   --pristine \
   -S studio-rpc-usb-uart \
+  ${ZMK_USB_LOGGING:+-S zmk-usb-logging} \
   -- \
   -DSHIELD="toucan_left rgbled_adapter nice_view_gem" \
   -DZMK_CONFIG=/work/config \
@@ -19,8 +22,10 @@ west build -s zmk/app -d /work/build/toucan_left -b seeeduino_xiao_ble \
 # build/toucan_left/zephyr/zmk.uf2
 
 # Right half: trackpad
+# https://zmk.dev/docs/development/usb-logging
 west build -s zmk/app -d /work/build/toucan_right -b seeeduino_xiao_ble \
   --pristine \
+  ${ZMK_USB_LOGGING:+-S zmk-usb-logging} \
   -- \
   -DSHIELD="toucan_right rgbled_adapter" \
   -DZMK_CONFIG=/work/config \

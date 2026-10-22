@@ -27,6 +27,15 @@ The first run pulls the image and the west modules. Later runs reuse both. `.wes
 ## Reference
 
 - [Toucan2 Keyboard](https://docs.beekeeb.com/toucan2-keyboard)
-    - [Flashing the Toucan2 Firmware
-](https://docs.beekeeb.com/toucan2-keyboard/convert-toucan-to-toucan2#flashing-the-toucan2-firmware)
+    - [Flashing the Toucan2 Firmware](https://docs.beekeeb.com/toucan2-keyboard/convert-toucan-to-toucan2#flashing-the-toucan2-firmware)
 - [Quick Start, Keymap & Firmware](https://docs.beekeeb.com/toucan-keyboard/quick-start-keymap-and-firmware)
+
+- [ZMK's USB logging page](https://v0-3-branch.zmk.dev/docs/development/usb-logging)
+  ```bash
+  # west build argument
+  # -S zmk-usb-logging
+  
+  ls /dev/tty.usbmodem*
+  sudo tio /dev/tty.usbmodemXXXX
+  ```
+  
