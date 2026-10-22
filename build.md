@@ -39,3 +39,9 @@ The first run pulls the image and the west modules. Later runs reuse both. `.wes
   sudo tio /dev/tty.usbmodemXXXX
   ```
   
+- [ZMK Driver for Azoteq IQS5XX Trackpads](https://github.com/beekeeb/zmk_driver_azoteq)
+  - [toucan_right.overlay](https://github.com/rovrevik/zmk-keyboard-toucan2/blob/main/boards/shields/toucan/toucan_right.overlay)
+  - [azoteq,tps43-common.yaml](https://github.com/beekeeb/zmk_driver_azoteq/blob/master/dts/bindings/input/azoteq%2Ctps43-common.yaml)
+  - [Azoteq TPS43](https://www.azoteq.com/product/i2c-trackpad-modules/)
+  - [ZMK Pointing Devices](https://v0-3-branch.zmk.dev/docs/features/pointing)
+  - [zmk-input-zoom](https://github.com/beekeeb/zmk-input-zoom)
