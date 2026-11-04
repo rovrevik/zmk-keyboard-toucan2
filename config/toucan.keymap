@@ -855,7 +855,7 @@ zmk/app/dts/bindings/zmk,combos.yaml
 &kp Q       &kp W       &kp E           &kp R                &kp T                        &kp Y   &kp U                &kp I       &kp O         &kp P
 LHRM_P_C(A) LHRM_R_C(S) LHRM_M_C(D)     LHRM_I_C(F)          &kp G                        &kp H   RHRM_I_C(J)          RHRM_M_C(K) RHRM_R_C(L)   RHRM_P_C(SEMI)
 LHRM_HYP(Z) LHRM_MEH(X) &kp C           &kp V                &kp B                        &kp N   &kp M                &kp COMMA   RHRM_MEH(DOT) RHRM_HYP(FSLH)
-                        THM(MOUSE, ESC) THM(CURSOR_C, SPACE) THM(NUM_PAD_C, TAB)          &kp RET THM(SYM_PAD_C, BSPC) &kp DEL
+                        THM(MOUSE, ESC) THM(CURSOR_C, TAB) THM(NUM_PAD_C, SPACE)          &kp RET THM(SYM_PAD_C, BSPC) &kp DEL
             >;
         };
 
@@ -865,7 +865,7 @@ LHRM_HYP(Z) LHRM_MEH(X) &kp C           &kp V                &kp B              
 &kp Q       &kp W       &kp E           &kp R                &kp T                        &kp Y   &kp U                &kp I       &kp O         &kp P
 LHRM_P_G(A) LHRM_R_G(S) LHRM_M_G(D)     LHRM_I_G(F)          &kp G                        &kp H   RHRM_I_G(J)          RHRM_M_G(K) RHRM_R_G(L)   RHRM_P_G(SEMI)
 LHRM_HYP(Z) LHRM_MEH(X) &kp C           &kp V                &kp B                        &kp N   &kp M                &kp COMMA   RHRM_MEH(DOT) RHRM_HYP(FSLH)
-                        THM(MOUSE, ESC) THM(CURSOR_G, SPACE) THM(NUM_PAD_G, TAB)          &kp RET THM(SYM_PAD_G, BSPC) &kp DEL
+                        THM(MOUSE, ESC) THM(CURSOR_G, TAB) THM(NUM_PAD_G, SPACE)          &kp RET THM(SYM_PAD_G, BSPC) &kp DEL
             >;
         };
 
