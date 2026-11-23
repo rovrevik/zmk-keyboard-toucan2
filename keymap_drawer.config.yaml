@@ -28,15 +28,15 @@ parse_config:
   # Short names on layer-tap / &mo legends (keys must match display-name from toucan.keymap)
   # https://github.com/caksoylar/keymap-drawer/blob/main/CONFIGURATION.md#layer_legend_map
   layer_legend_map:
-    BaseCgs: CAGS
-    BaseGsc: GASC
-    CrsrCgs: cursor
-    CrsrGsc: cursor
-    NmPdCgs: number
-    NmPdGsc: number
-    SyPdCgs: symbol
-    SyPdGsc: symbol
-    FnPd: function
+    BasC: CAGS
+    BasG: GASC
+    CsrC: cursor
+    CsrG: cursor
+    NumC: number
+    NumG: number
+    SymC: symbol
+    SymG: symbol
+    Func: function
     Mouse: mouse
     Slow: slow
     Fast: fast
