@@ -850,7 +850,7 @@ zmk/app/dts/bindings/zmk,combos.yaml
         */
 
         BASE_C {
-            display-name = "BaseCgs";
+            display-name = "BasC";
             bindings = <
 &kp Q       &kp W       &kp E           &kp R                &kp T                        &kp Y   &kp U                &kp I       &kp O         &kp P
 LHRM_P_C(A) LHRM_R_C(S) LHRM_M_C(D)     LHRM_I_C(F)          &kp G                        &kp H   RHRM_I_C(J)          RHRM_M_C(K) RHRM_R_C(L)   RHRM_P_C(SEMI)
@@ -860,7 +860,7 @@ LHRM_HYP(Z) LHRM_MEH(X) &kp C           &kp V                &kp B              
         };
 
         BASE_G {
-            display-name = "BaseGsc";
+            display-name = "BasG";
             bindings = <
 &kp Q       &kp W       &kp E           &kp R                &kp T                        &kp Y   &kp U                &kp I       &kp O         &kp P
 LHRM_P_G(A) LHRM_R_G(S) LHRM_M_G(D)     LHRM_I_G(F)          &kp G                        &kp H   RHRM_I_G(J)          RHRM_M_G(K) RHRM_R_G(L)   RHRM_P_G(SEMI)
@@ -889,7 +889,7 @@ LHRM_HYP(Z) LHRM_MEH(X) &kp C           &kp V                &kp B              
         // considered and rejected swapping home and end to be consistent with page down/up.
 
         CURSOR_C {
-            display-name = "CrsrCgs";
+            display-name = "CsrC";
             bindings = <
 &kp _QUIT       &kp _CLOSE      &trans    &kp _REFRESH    &kp _NEW_TAB             &kp _REDO &kp _PASTE &kp _COPY &kp _CUT  &kp _UNDO
 LHRM_P_C(_ALL)  LHRM_R_C(_SAVE) &trans    LHRM_I_C(_FIND) &kp _FIND_AGAIN          &capsword &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT
@@ -899,7 +899,7 @@ LHRM_HYP(_UNDO) LHRM_MEH(_CUT)  &kp _COPY &kp _PASTE      &trans                
         };
 
         CURSOR_G {
-            display-name = "CrsrGsc";
+            display-name = "CsrG";
             bindings = <
 &kp _QUIT       &kp _CLOSE      &trans    &kp _REFRESH    &kp _NEW_TAB             &kp _REDO &kp _PASTE &kp _COPY &kp _CUT  &kp _UNDO
 LHRM_P_G(_ALL)  LHRM_R_G(_SAVE) &trans    LHRM_I_G(_FIND) &kp _FIND_AGAIN          &capsword &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT
@@ -936,7 +936,7 @@ LHRM_HYP(_UNDO) LHRM_MEH(_CUT)  &kp _COPY &kp _PASTE      &trans                
         */
 
         NUM_PAD_C {
-            display-name = "NmPdCgs";
+            display-name = "NumC";
             bindings = <
 &trans          &trans &kp LPAR       &kp RPAR       &trans           &trans  &kp N7       &kp N8       &kp N9       &kp MINUS
 &trans          &trans LHRM_M_C(LBKT) LHRM_I_C(RBKT) &kp RET          &kp SQT RHRM_I_C(N4) RHRM_M_C(N5) RHRM_R_C(N6) RHRM_P_C_TAP(plus_equal)
@@ -946,7 +946,7 @@ LHRM_MEH(GRAVE) &trans &kp LBRC       &kp RBRC       &trans           &trans  &k
         };
 
         NUM_PAD_G {
-            display-name = "NmPdGsc";
+            display-name = "NumG";
             bindings = <
 &trans          &trans &kp LPAR       &kp RPAR       &trans           &trans  &kp N7       &kp N8       &kp N9       &kp MINUS
 &trans          &trans LHRM_M_G(LBKT) LHRM_I_G(RBKT) &kp RET          &kp SQT RHRM_I_G(N4) RHRM_M_G(N5) RHRM_R_G(N6) RHRM_P_G_TAP(plus_equal)
@@ -956,7 +956,7 @@ LHRM_MEH(GRAVE) &trans &kp LBRC       &kp RBRC       &trans           &trans  &k
         };
 
         SYM_PAD_C {
-            display-name = "SyPdCgs";
+            display-name = "SymC";
             bindings = <
 &trans &trans &trans &trans &trans          &trans &kp AMPS       &kp STAR        &trans          &trans
 &trans &trans &trans &trans &trans          &trans RHRM_I_C(DLLR) RHRM_M_C(PRCNT) RHRM_R_C(CARET) &trans
@@ -966,7 +966,7 @@ LHRM_MEH(GRAVE) &trans &kp LBRC       &kp RBRC       &trans           &trans  &k
         };
 
         SYM_PAD_G {
-            display-name = "SyPdGsc";
+            display-name = "SymG";
             bindings = <
 &trans &trans &trans &trans &trans          &trans &kp AMPS       &kp STAR        &trans          &trans
 &trans &trans &trans &trans &trans          &trans RHRM_I_G(DLLR) RHRM_M_G(PRCNT) RHRM_R_G(CARET) &trans
@@ -976,7 +976,7 @@ LHRM_MEH(GRAVE) &trans &kp LBRC       &kp RBRC       &trans           &trans  &k
         };
 
         /*
-        Function Pad: FnPd
+        Function Pad: Func
         | Left Half:                    |      | Right Half:            |
         | CAGS | GASC |     | C   | CA  |      |   | F7 | F8 | F9 | F10 |
         |      |      |     |     |     |      |   | F4 | F5 | F6 | F12 |
@@ -991,7 +991,7 @@ LHRM_MEH(GRAVE) &trans &kp LBRC       &kp RBRC       &trans           &trans  &k
         */
 
         FCN_PAD {
-            display-name = "FnPd";
+            display-name = "Func";
             bindings = <
 &to BASE_C   &to BASE_G   &trans       &bt BT_CLR   &bt BT_CLR_ALL          &trans &kp F7 &kp F8 &kp F9 &kp F10
 &trans       &trans       &trans       &trans       &trans                  &trans &kp F4 &kp F5 &kp F6 &kp F12
