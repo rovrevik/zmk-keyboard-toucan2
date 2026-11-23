@@ -15,32 +15,32 @@ OUT = REPO / "build" / "keymap"
 
 # display-name from config/toucan.keymap; order controls SVG layout, omit to hide
 LAYERS = [
-    "BaseCgs",
-    "CrsrCgs",
-    "NmPdCgs",
-    "SyPdCgs",
-    "FnPd",
+    "BasC",
+    "CsrC",
+    "NumC",
+    "SymC",
+    "Func",
     "Mouse",
-    "BaseGsc",
-    "CrsrGsc",
-    "NmPdGsc",
-    "SyPdGsc",
+    "BasG",
+    "CsrG",
+    "NumG",
+    "SymG",
     # "Function",
 ]
 
 # parsed display-name -> SVG section header (layer_legend_map sets thumb hold labels)
 LAYER_RENAME = {
-    "BaseCgs": "macOS Base (BaseCgs CAGS)",
-    "CrsrCgs": "macOS Cursor (CrsrCgs CAGS)",
-    "NmPdCgs": "macOS Number Pad (NmPdCgs CAGS)",
-    "SyPdCgs": "macOS Symbol Pad (SyPdCgs CAGS)",
-    "FnPd": "Function Pad",
+    "BasC": "macOS Base (BasC CAGS)",
+    "CsrC": "macOS Cursor (CsrC CAGS)",
+    "NumC": "macOS Number Pad (NumC CAGS)",
+    "SymC": "macOS Symbol Pad (SymC CAGS)",
+    "Func": "Function Pad",
     "Mouse": "Mouse",
     "Function": "Globe",
-    "BaseGsc": "Linux Base (BaseGsc GASC)",
-    "CrsrGsc": "Linux Cursor (CrsrGsc GASC)",
-    "NmPdGsc": "Linux Number Pad (CrsrGsc GASC)",
-    "SyPdGsc": "Linux Symbol Pad (SyPdGsc GASC)",
+    "BasG": "Linux Base (BasG GASC)",
+    "CsrG": "Linux Cursor (CsrG GASC)",
+    "NumG": "Linux Number Pad (CsrG GASC)",
+    "SymG": "Linux Symbol Pad (SymG GASC)",
 }
 
 # Thumb layer-tap key positions -> hold label (same for CAGS and GASC)
@@ -54,7 +54,7 @@ THUMB_HOLD_LEGEND = {
 def enrich_held_layer_legends(layers: dict[str, list]) -> None:
     """Label empty held &trans activator keys from thumb position, not CAGS/GASC base layer."""
     for layer_name, layer_keys in layers.items():
-        if layer_name in ("BaseCgs", "BaseGsc"):
+        if layer_name in ("BasC", "BasG"):
             continue
         for idx, key in enumerate(layer_keys):
             if isinstance(key, dict) and "held" in key.get("type", "") and (legend := THUMB_HOLD_LEGEND.get(idx)):
